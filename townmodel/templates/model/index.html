@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for citizen in citizen %}
+<ul>
+  <li>
+    Автор: {{ citizen.name.get_full_name }}
+  </li>
+  <li>
+    Возраст: {{ citizen.age }}
+  </li>
+  <li>
+    Соц статус: {{ citizen.Status}}
+  </li>
+  <li>
+    Зарплата: {{ citizen.Salary }}
+  </li>
+</ul>
+<a href="">Рабочие</a>
+{% if not forloop.last %}<hr>{% endif %}
+{% endfor %} 
+
+{% endblock %} 
